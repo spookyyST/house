@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог новостроек | Prime Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="newbuildings.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">&#9670;</span>
+                    <span class="logo-text">PRIME ESTATE</span>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="catalog.html" class="nav-link">Вторичка</a>
+                    <a href="newbuildings.html" class="nav-link active">Новостройки</a>
+                    <a href="about.html" class="nav-link">О компании</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </nav>
+                <a href="tel:+74951234567" class="btn btn-primary">+7 (495) 123-45-67</a>
+                <button class="mobile-menu-btn" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header nb-page-header">
+        <div class="container">
+            <h1 class="page-title">Каталог новостроек</h1>
+            <p class="page-subtitle">Лучшие жилые комплексы от проверенных застройщиков</p>
+        </div>
+        <div class="nb-page-header-decor"></div>
+    </section>
+
+    <!-- Filters -->
+    <section class="nb-filters">
+        <div class="container">
+            <div class="nb-filters-bar reveal">
+                <div class="nb-filter-group">
+                    <label class="nb-filter-label">Район</label>
+                    <select class="nb-filter-select">
+                        <option>Все районы</option>
+                        <option>Приморский</option>
+                        <option>Центральный</option>
+                        <option>Северный</option>
+                        <option>Южный</option>
+                    </select>
+                </div>
+                <div class="nb-filter-group">
+                    <label class="nb-filter-label">Срок сдачи</label>
+                    <select class="nb-filter-select">
+                        <option>Любой</option>
+                        <option>Готов</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                        <option>2028</option>
+                    </select>
+                </div>
+                <div class="nb-filter-group">
+                    <label class="nb-filter-label">Цена от</label>
+                    <input type="text" class="nb-filter-input" placeholder="от 5 000 000 &#8381;">
+                </div>
+                <div class="nb-filter-group">
+                    <label class="nb-filter-label">Цена до</label>
+                    <input type="text" class="nb-filter-input" placeholder="до 30 000 000 &#8381;">
+                </div>
+                <button class="btn btn-primary nb-filter-btn">Найти</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Count -->
+    <section class="nb-results">
+        <div class="container">
+            <div class="nb-results-header reveal">
+                <p class="nb-results-count">Найдено <strong>4</strong> жилых комплекса</p>
+                <div class="nb-sort">
+                    <label>Сортировка:</label>
+                    <select class="nb-sort-select">
+                        <option>По популярности</option>
+                        <option>По цене (возрастание)</option>
+                        <option>По цене (убывание)</option>
+                        <option>По сроку сдачи</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Buildings Grid -->
+    <section class="nb-catalog">
+        <div class="container">
+            <div class="nb-grid stagger-children">
+
+                <!-- Card 1 -->
+                <article class="nb-card reveal" style="--i: 0">
+                    <div class="nb-card-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="ЖК Морской квартал" loading="lazy">
+                        <div class="nb-card-status">Сдача Q2 2026</div>
+                        <div class="nb-card-badge-row">
+                            <span class="nb-card-class">Бизнес</span>
+                        </div>
+                    </div>
+                    <div class="nb-card-content">
+                        <h3 class="nb-card-title">ЖК &laquo;Морской квартал&raquo;</h3>
+                        <p class="nb-card-location">&#128205; Приморский район, наб. Морская</p>
+                        <div class="nb-card-stats">
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Цена от</span>
+                                <span class="nb-card-stat-value">8 500 000 &#8381;</span>
+                            </div>
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Площадь от</span>
+                                <span class="nb-card-stat-value">45 м&sup2;</span>
+                            </div>
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Корпусов</span>
+                                <span class="nb-card-stat-value">5</span>
+                            </div>
+                        </div>
+                        <a href="newbuilding-single.html" class="btn btn-outline nb-card-btn">Подробнее о ЖК</a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="nb-card reveal" style="--i: 1">
+                    <div class="nb-card-image">
+                        <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=800&q=80" alt="ЖК Парковые резиденции" loading="lazy">
+                        <div class="nb-card-status nb-status-ready">Готов</div>
+                        <div class="nb-card-badge-row">
+                            <span class="nb-card-class nb-class-premium">Премиум</span>
+                        </div>
+                    </div>
+                    <div class="nb-card-content">
+                        <h3 class="nb-card-title">ЖК &laquo;Парковые резиденции&raquo;</h3>
+                        <p class="nb-card-location">&#128205; Северный район, ул. Парковая</p>
+                        <div class="nb-card-stats">
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Цена от</span>
+                                <span class="nb-card-stat-value">12 000 000 &#8381;</span>
+                            </div>
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Площадь от</span>
+                                <span class="nb-card-stat-value">65 м&sup2;</span>
+                            </div>
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Корпусов</span>
+                                <span class="nb-card-stat-value">3</span>
+                            </div>
+                        </div>
+                        <a href="newbuilding-single.html" class="btn btn-outline nb-card-btn">Подробнее о ЖК</a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="nb-card reveal" style="--i: 2">
+                    <div class="nb-card-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="ЖК Центральный парк" loading="lazy">
+                        <div class="nb-card-status nb-status-building">Строится</div>
+                        <div class="nb-card-badge-row">
+                            <span class="nb-card-class">Бизнес</span>
+                        </div>
+                    </div>
+                    <div class="nb-card-content">
+                        <h3 class="nb-card-title">ЖК &laquo;Центральный парк&raquo;</h3>
+                        <p class="nb-card-location">&#128205; Центральный район, ул. Садовая</p>
+                        <div class="nb-card-stats">
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Цена от</span>
+                                <span class="nb-card-stat-value">18 700 000 &#8381;</span>
+                            </div>
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Площадь от</span>
+                                <span class="nb-card-stat-value">55 м&sup2;</span>
+                            </div>
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Корпусов</span>
+                                <span class="nb-card-stat-value">7</span>
+                            </div>
+                        </div>
+                        <a href="newbuilding-single.html" class="btn btn-outline nb-card-btn">Подробнее о ЖК</a>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="nb-card reveal" style="--i: 3">
+                    <div class="nb-card-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="ЖК Солнечный берег" loading="lazy">
+                        <div class="nb-card-status">Сдача Q4 2027</div>
+                        <div class="nb-card-badge-row">
+                            <span class="nb-card-class nb-class-comfort">Комфорт</span>
+                        </div>
+                    </div>
+                    <div class="nb-card-content">
+                        <h3 class="nb-card-title">ЖК &laquo;Солнечный берег&raquo;</h3>
+                        <p class="nb-card-location">&#128205; Южный район, бул. Приморский</p>
+                        <div class="nb-card-stats">
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Цена от</span>
+                                <span class="nb-card-stat-value">6 200 000 &#8381;</span>
+                            </div>
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Площадь от</span>
+                                <span class="nb-card-stat-value">38 м&sup2;</span>
+                            </div>
+                            <div class="nb-card-stat">
+                                <span class="nb-card-stat-label">Корпусов</span>
+                                <span class="nb-card-stat-value">4</span>
+                            </div>
+                        </div>
+                        <a href="newbuilding-single.html" class="btn btn-outline nb-card-btn">Подробнее о ЖК</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta nb-cta">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2 class="cta-title">Не нашли подходящий ЖК?</h2>
+                <p class="cta-text">Оставьте заявку, и наш специалист подберёт для вас лучшие варианты в новостройках</p>
+                <form class="cta-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit" class="btn btn-accent">Получить подборку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">&#9670;</span>
+                        <span class="logo-text">PRIME ESTATE</span>
+                    </a>
+                    <p class="footer-text">Агентство элитной недвижимости премиум-класса. Помогаем найти дом вашей мечты с 2014 года.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Каталог</h4>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html">Вторичное жильё</a></li>
+                        <li><a href="newbuildings.html">Новостройки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Компания</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-links">
+                        <li>+7 (495) 123-45-67</li>
+                        <li>info@primeestate.ru</li>
+                        <li>г. Москва, ул. Примерная, 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Prime Estate. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" aria-label="Наверх">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

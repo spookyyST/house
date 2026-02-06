@@ -9,7 +9,7 @@
 .breadcrumbs a {
     color: var(--text-gray);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s var(--transition);
 }
 
 .breadcrumbs a:hover {
@@ -41,7 +41,7 @@
     color: white;
     font-size: 13px;
     font-weight: 600;
-    border-radius: 6px;
+    border-radius: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 16px;
@@ -83,7 +83,7 @@
 
 .gallery-main {
     height: 500px;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     margin-bottom: 16px;
 }
@@ -92,6 +92,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.6s var(--transition);
+}
+
+.gallery-main:hover img {
+    transform: scale(1.03);
 }
 
 .gallery-grid {
@@ -102,21 +107,27 @@
 
 .gallery-item {
     height: 200px;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.4s var(--transition), box-shadow 0.4s var(--transition);
 }
 
 .gallery-item:hover {
-    transform: scale(1.02);
+    transform: scale(1.04) translateY(-4px);
+    box-shadow: 0 12px 32px var(--shadow-lg);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.6s var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
 }
 
 .gallery-more {
@@ -136,6 +147,11 @@
     color: white;
     font-size: 24px;
     font-weight: 600;
+    transition: background 0.4s var(--transition);
+}
+
+.gallery-more:hover .gallery-more-overlay {
+    background: rgba(0, 0, 0, 0.45);
 }
 
 /* Content Layout */
@@ -156,15 +172,16 @@
 .feature-item {
     background: white;
     padding: 32px 24px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
+    border-radius: 16px;
+    border: 1.5px solid var(--border);
     text-align: center;
-    transition: all 0.3s;
+    transition: all 0.4s var(--transition);
 }
 
 .feature-item:hover {
-    box-shadow: 0 8px 24px var(--shadow-lg);
-    transform: translateY(-4px);
+    box-shadow: 0 12px 32px var(--shadow-lg);
+    transform: translateY(-6px);
+    border-color: var(--accent);
 }
 
 .feature-icon {
@@ -208,8 +225,8 @@
 /* Characteristics */
 .characteristics-grid {
     background: white;
-    border-radius: 12px;
-    border: 1px solid var(--border);
+    border-radius: 16px;
+    border: 1.5px solid var(--border);
     overflow: hidden;
 }
 
@@ -218,6 +235,11 @@
     grid-template-columns: 1fr 1fr;
     padding: 20px 32px;
     border-bottom: 1px solid var(--border);
+    transition: background 0.3s var(--transition);
+}
+
+.char-item:hover {
+    background: var(--bg-light);
 }
 
 .char-item:last-child {
@@ -248,10 +270,17 @@
     gap: 16px;
     padding: 20px;
     background: white;
-    border-radius: 12px;
-    border: 1px solid var(--border);
+    border-radius: 16px;
+    border: 1.5px solid var(--border);
     font-size: 15px;
     color: var(--text-gray);
+    transition: all 0.4s var(--transition);
+}
+
+.infra-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px var(--shadow);
+    border-color: var(--accent);
 }
 
 .infra-icon {
@@ -260,9 +289,9 @@
 
 /* Map */
 .property-map {
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border);
 }
 
 /* Sidebar */
@@ -278,9 +307,16 @@
 .agent-card,
 .share-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 32px;
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border);
+    transition: box-shadow 0.4s var(--transition);
+}
+
+.contact-card:hover,
+.agent-card:hover,
+.share-card:hover {
+    box-shadow: 0 12px 40px var(--shadow);
 }
 
 .contact-title {
@@ -293,6 +329,7 @@
     color: var(--text-gray);
     margin-bottom: 24px;
     font-size: 15px;
+    line-height: 1.6;
 }
 
 .contact-form {
@@ -303,19 +340,26 @@
 
 .contact-form input,
 .contact-form textarea {
-    padding: 14px 16px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    padding: 16px 18px;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
     font-size: 15px;
     font-family: inherit;
-    transition: all 0.3s;
+    transition: all 0.3s var(--transition);
+    background: var(--bg-light);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 4px rgba(26, 54, 93, 0.08);
+    background: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-light);
 }
 
 .contact-form textarea {
@@ -323,11 +367,24 @@
     min-height: 100px;
 }
 
+.contact-form .btn {
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 12px;
+    transition: all 0.4s var(--transition);
+}
+
+.contact-form .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26, 54, 93, 0.3);
+}
+
 .contact-note {
     font-size: 12px;
     color: var(--text-light);
     text-align: center;
-    margin-top: 12px;
+    margin-top: 16px;
+    line-height: 1.5;
 }
 
 /* Agent Card */
@@ -344,6 +401,12 @@
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
+    border: 3px solid var(--accent);
+    transition: transform 0.4s var(--transition);
+}
+
+.agent-photo:hover {
+    transform: scale(1.08);
 }
 
 .agent-photo img {
@@ -366,18 +429,19 @@
 
 .agent-phone {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 14px 28px;
     background: var(--primary);
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 12px;
     font-weight: 600;
-    transition: all 0.3s;
+    transition: all 0.4s var(--transition);
 }
 
 .agent-phone:hover {
     background: var(--primary-light);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(26, 54, 93, 0.3);
 }
 
 /* Share Card */
@@ -401,10 +465,10 @@
     align-items: center;
     justify-content: center;
     background: var(--bg-light);
-    border: 1px solid var(--border);
-    border-radius: 8px;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.4s var(--transition);
     color: var(--text-gray);
 }
 
@@ -412,7 +476,152 @@
     background: var(--primary);
     border-color: var(--primary);
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(26, 54, 93, 0.25);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s var(--transition);
+    box-shadow: 0 4px 16px rgba(26, 54, 93, 0.3);
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--primary-light);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(26, 54, 93, 0.4);
+}
+
+/* Toast Notification */
+#toast {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    background: var(--text-dark);
+    box-shadow: 0 8px 32px var(--shadow-xl);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s var(--transition);
+    z-index: 10000;
+    white-space: nowrap;
+}
+
+#toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+#toast.success {
+    background: #38a169;
+}
+
+/* Gallery Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.4s var(--transition);
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+}
+
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.4s var(--transition);
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s var(--transition);
+    backdrop-filter: blur(8px);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.lightbox-close {
+    top: 24px;
+    right: 24px;
+}
+
+.lightbox-prev {
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-next {
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-prev:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-next:hover {
+    transform: translateY(-50%) scale(1.1);
 }
 
 /* Responsive */
@@ -427,58 +636,313 @@
     .property-header {
         flex-direction: column;
     }
-    
+
     .property-price-large {
         text-align: left;
     }
-    
+
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .property-content-layout {
         grid-template-columns: 1fr;
     }
-    
+
     .property-sidebar {
         position: static;
     }
 }
 
 @media (max-width: 768px) {
+    .property-single {
+        padding: 40px 0 60px;
+    }
+
     .property-title-large {
         font-size: 32px;
     }
-    
+
     .price-value {
         font-size: 40px;
     }
-    
+
     .gallery-main {
         height: 300px;
+        border-radius: 12px;
     }
-    
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
-    
+
+    .gallery-item {
+        height: 160px;
+        border-radius: 12px;
+    }
+
     .features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
     }
-    
+
+    .feature-item {
+        padding: 24px 16px;
+        border-radius: 12px;
+    }
+
+    .feature-icon {
+        font-size: 32px;
+    }
+
+    .feature-value {
+        font-size: 20px;
+    }
+
     .section-heading {
         font-size: 28px;
+        margin-bottom: 24px;
     }
-    
+
+    .property-section {
+        margin-bottom: 40px;
+    }
+
     .characteristics-grid {
         font-size: 14px;
+        border-radius: 12px;
     }
-    
+
     .char-item {
         padding: 16px 20px;
     }
-    
+
     .infrastructure-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .infra-item {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .contact-card,
+    .agent-card,
+    .share-card {
+        padding: 24px;
+        border-radius: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 14px 16px;
+        border-radius: 10px;
+    }
+
+    .agent-phone {
+        padding: 12px 24px;
+        border-radius: 10px;
+    }
+
+    .property-map iframe {
+        height: 300px;
+    }
+
+    .back-to-top {
+        bottom: 24px;
+        right: 24px;
+        width: 44px;
+        height: 44px;
+    }
+
+    #toast {
+        left: 16px;
+        right: 16px;
+        transform: translateX(0) translateY(100px);
+        text-align: center;
+        white-space: normal;
+    }
+
+    #toast.show {
+        transform: translateX(0) translateY(0);
+    }
+
+    .lightbox-close {
+        top: 16px;
+        right: 16px;
+    }
+
+    .lightbox-prev {
+        left: 12px;
+    }
+
+    .lightbox-next {
+        right: 12px;
+    }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .property-single {
+        padding: 24px 0 40px;
+    }
+
+    .breadcrumbs {
+        padding: 12px 0;
+        font-size: 13px;
+    }
+
+    .property-header {
+        margin-bottom: 24px;
+        gap: 20px;
+    }
+
+    .property-title-large {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .property-location-large {
+        font-size: 15px;
+    }
+
+    .price-value {
+        font-size: 32px;
+    }
+
+    .price-per-sqm {
+        font-size: 14px;
+    }
+
+    .gallery-main {
+        height: 220px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .gallery-item {
+        height: 120px;
+        border-radius: 10px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .feature-item {
+        padding: 20px 16px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
+    }
+
+    .feature-icon {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+
+    .section-heading {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .property-description p {
+        font-size: 15px;
+        margin-bottom: 16px;
+        line-height: 1.7;
+    }
+
+    .char-item {
+        padding: 14px 16px;
+        gap: 8px;
+    }
+
+    .char-label,
+    .char-value {
+        font-size: 13px;
+    }
+
+    .infra-item {
+        padding: 14px;
+        font-size: 14px;
+        gap: 12px;
+    }
+
+    .infra-icon {
+        font-size: 26px;
+    }
+
+    .contact-card,
+    .agent-card,
+    .share-card {
+        padding: 20px;
+    }
+
+    .contact-title {
+        font-size: 20px;
+    }
+
+    .contact-text {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        gap: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .agent-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .agent-name {
+        font-size: 18px;
+    }
+
+    .share-btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+    }
+
+    .share-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .property-map iframe {
+        height: 240px;
+    }
+
+    .back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-more-overlay {
+        font-size: 18px;
     }
 }

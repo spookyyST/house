@@ -1,21 +1,6 @@
-/* Catalog Specific Styles */
-
-.page-header {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    padding: 80px 0 60px;
-    color: white;
-    text-align: center;
-}
-
-.page-title {
-    font-size: 56px;
-    margin-bottom: 16px;
-}
-
-.page-subtitle {
-    font-size: 18px;
-    opacity: 0.9;
-}
+/* ============================================
+   CATALOG PAGE STYLES
+   ============================================ */
 
 .catalog {
     padding: 60px 0 100px;
@@ -27,29 +12,76 @@
     gap: 40px;
 }
 
+/* Mobile filter toggle */
+.filter-toggle-btn {
+    display: none;
+    width: 100%;
+    padding: 16px 24px;
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    cursor: pointer;
+    margin-bottom: 24px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s var(--transition);
+}
+
+.filter-toggle-btn:hover {
+    background: var(--bg-light);
+    border-color: var(--primary);
+}
+
+.filter-toggle-btn svg {
+    transition: transform 0.3s;
+}
+
+.filter-toggle-btn.active svg {
+    transform: rotate(180deg);
+}
+
 /* Sidebar */
 .catalog-sidebar {
     position: sticky;
-    top: 100px;
+    top: 90px;
     height: fit-content;
 }
 
 .filter-section {
     background: white;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 32px;
     border: 1px solid var(--border);
+    transition: box-shadow 0.3s var(--transition);
+}
+
+.filter-section:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 
 .filter-title {
     font-size: 24px;
     margin-bottom: 32px;
     color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gold-gradient);
 }
 
 .filter-group {
-    margin-bottom: 32px;
-    padding-bottom: 32px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
     border-bottom: 1px solid var(--border);
 }
 
@@ -61,12 +93,12 @@
 
 .filter-label {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .filter-checkboxes {
@@ -82,6 +114,12 @@
     cursor: pointer;
     font-size: 15px;
     color: var(--text-gray);
+    transition: color 0.3s;
+    padding: 4px 0;
+}
+
+.checkbox-label:hover {
+    color: var(--primary);
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -89,23 +127,25 @@
     height: 20px;
     cursor: pointer;
     accent-color: var(--primary);
+    border-radius: 4px;
 }
 
 .filter-select {
     width: 100%;
     padding: 12px 16px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
     font-size: 15px;
     font-family: inherit;
     background: white;
-    transition: all 0.3s;
+    transition: all 0.3s var(--transition);
+    color: var(--text-dark);
 }
 
 .filter-select:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 4px rgba(26, 54, 93, 0.08);
 }
 
 .filter-rooms {
@@ -116,18 +156,20 @@
 
 .room-btn {
     padding: 12px;
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border);
     background: white;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s var(--transition);
+    color: var(--text-gray);
 }
 
 .room-btn:hover {
     border-color: var(--primary);
     color: var(--primary);
+    background: rgba(26, 54, 93, 0.04);
 }
 
 .room-btn.active {
@@ -144,21 +186,22 @@
 
 .filter-price-inputs input {
     padding: 12px 16px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
     font-size: 15px;
     font-family: inherit;
-    transition: all 0.3s;
+    transition: all 0.3s var(--transition);
+    color: var(--text-dark);
 }
 
 .filter-price-inputs input:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
+    box-shadow: 0 0 0 4px rgba(26, 54, 93, 0.08);
 }
 
 .filter-actions {
-    margin-top: 32px;
+    margin-top: 28px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -170,21 +213,25 @@
     color: var(--text-gray);
     font-size: 14px;
     cursor: pointer;
-    padding: 8px;
-    transition: color 0.3s;
+    padding: 10px;
+    transition: all 0.3s var(--transition);
+    border-radius: 6px;
 }
 
 .btn-reset:hover {
     color: var(--primary);
+    background: var(--bg-light);
 }
 
-/* Catalog Content */
+/* ============================================
+   CATALOG CONTENT
+   ============================================ */
 .catalog-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
-    padding: 20px 24px;
+    padding: 18px 24px;
     background: white;
     border-radius: 12px;
     border: 1px solid var(--border);
@@ -200,16 +247,24 @@
     font-size: 14px;
     font-weight: 600;
     color: var(--text-gray);
+    white-space: nowrap;
 }
 
 .sort-select {
     padding: 10px 16px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
     font-size: 14px;
     font-family: inherit;
     background: white;
     min-width: 220px;
+    transition: all 0.3s var(--transition);
+    color: var(--text-dark);
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: var(--primary);
 }
 
 .view-toggle {
@@ -224,10 +279,10 @@
     align-items: center;
     justify-content: center;
     background: none;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s var(--transition);
     color: var(--text-gray);
 }
 
@@ -241,16 +296,32 @@
 .catalog-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 28px;
 }
 
-/* Pagination */
+.catalog-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+.catalog-grid.list-view .property-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+}
+
+.catalog-grid.list-view .property-image {
+    height: 100%;
+    min-height: 240px;
+}
+
+/* ============================================
+   PAGINATION
+   ============================================ */
 .pagination {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 60px;
-    padding: 32px;
+    margin-top: 48px;
+    padding: 24px 32px;
     background: white;
     border-radius: 12px;
     border: 1px solid var(--border);
@@ -259,12 +330,12 @@
 .pagination-btn {
     padding: 12px 24px;
     background: none;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s var(--transition);
     color: var(--text-gray);
 }
 
@@ -272,6 +343,7 @@
     background: var(--primary);
     border-color: var(--primary);
     color: white;
+    transform: translateY(-2px);
 }
 
 .pagination-btn:disabled {
@@ -286,18 +358,18 @@
 }
 
 .pagination-number {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: none;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s var(--transition);
     color: var(--text-gray);
 }
 
@@ -306,6 +378,7 @@
     background: var(--primary);
     border-color: var(--primary);
     color: white;
+    transform: translateY(-2px);
 }
 
 .pagination-numbers span {
@@ -313,7 +386,9 @@
     padding: 0 8px;
 }
 
-/* Responsive */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 @media (max-width: 1200px) {
     .catalog-layout {
         grid-template-columns: 280px 1fr;
@@ -325,47 +400,77 @@
     .catalog-layout {
         grid-template-columns: 1fr;
     }
-    
+
+    .filter-toggle-btn {
+        display: flex;
+    }
+
     .catalog-sidebar {
         position: static;
     }
-    
+
     .filter-section {
-        margin-bottom: 32px;
+        display: none;
     }
-    
+
+    .filter-section.active {
+        display: block;
+        animation: fadeIn 0.3s var(--transition);
+    }
+
     .catalog-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .page-title {
-        font-size: 36px;
+    .catalog {
+        padding: 40px 0 60px;
     }
-    
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .catalog-grid.list-view .property-card {
+        grid-template-columns: 1fr;
+    }
+
     .catalog-controls {
         flex-direction: column;
         gap: 16px;
+        padding: 16px 20px;
     }
-    
+
     .sort-options {
         width: 100%;
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .sort-select {
         width: 100%;
+        min-width: auto;
     }
-    
+
+    .view-toggle {
+        display: none;
+    }
+
     .pagination {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
+        padding: 20px;
     }
-    
+
     .pagination-numbers {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .pagination-btn {
+        width: 100%;
+        text-align: center;
     }
 }

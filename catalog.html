@@ -15,20 +15,19 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <span class="logo-icon">◆</span>
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">&#9670;</span>
                     <span class="logo-text">PRIME ESTATE</span>
-                </div>
+                </a>
                 <nav class="nav">
                     <a href="index.html" class="nav-link">Главная</a>
                     <a href="catalog.html" class="nav-link active">Вторичка</a>
-                    <a href="catalog.html" class="nav-link">Аренда</a>
                     <a href="newbuildings.html" class="nav-link">Новостройки</a>
-                    <a href="#" class="nav-link">О компании</a>
-                    <a href="#" class="nav-link">Контакты</a>
+                    <a href="about.html" class="nav-link">О компании</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
                 </nav>
-                <button class="btn btn-primary">+7 (495) 123-45-67</button>
-                <button class="mobile-menu-btn">
+                <a href="tel:+74951234567" class="btn btn-primary">+7 (495) 123-45-67</a>
+                <button class="mobile-menu-btn" aria-label="Меню">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -49,11 +48,24 @@
     <section class="catalog">
         <div class="container">
             <div class="catalog-layout">
+                <!-- Mobile filter toggle -->
+                <div style="grid-column: 1 / -1;">
+                    <button class="filter-toggle-btn" id="filterToggle">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M3 6h14M6 10h8M8 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Фильтры
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-left: auto;">
+                            <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+
                 <!-- Sidebar Filters -->
                 <aside class="catalog-sidebar">
-                    <div class="filter-section">
+                    <div class="filter-section" id="filterSection">
                         <h3 class="filter-title">Фильтры</h3>
-                        
+
                         <div class="filter-group">
                             <label class="filter-label">Тип недвижимости</label>
                             <div class="filter-checkboxes">
@@ -98,7 +110,7 @@
                         </div>
 
                         <div class="filter-group">
-                            <label class="filter-label">Цена, ₽</label>
+                            <label class="filter-label">Цена, &#8381;</label>
                             <div class="filter-price-inputs">
                                 <input type="text" placeholder="От" value="5 000 000">
                                 <input type="text" placeholder="До" value="50 000 000">
@@ -136,7 +148,6 @@
 
                 <!-- Catalog Content -->
                 <div class="catalog-content">
-                    <!-- Sort & View -->
                     <div class="catalog-controls">
                         <div class="sort-options">
                             <label>Сортировка:</label>
@@ -148,7 +159,7 @@
                             </select>
                         </div>
                         <div class="view-toggle">
-                            <button class="view-btn active">
+                            <button class="view-btn active" data-view="grid">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <rect x="2" y="2" width="7" height="7" stroke="currentColor" stroke-width="1.5"/>
                                     <rect x="11" y="2" width="7" height="7" stroke="currentColor" stroke-width="1.5"/>
@@ -156,7 +167,7 @@
                                     <rect x="11" y="11" width="7" height="7" stroke="currentColor" stroke-width="1.5"/>
                                 </svg>
                             </button>
-                            <button class="view-btn">
+                            <button class="view-btn" data-view="list">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <rect x="2" y="3" width="16" height="3" stroke="currentColor" stroke-width="1.5"/>
                                     <rect x="2" y="9" width="16" height="3" stroke="currentColor" stroke-width="1.5"/>
@@ -166,23 +177,19 @@
                         </div>
                     </div>
 
-                    <!-- Properties List -->
-                    <div class="catalog-grid">
-                        <!-- Property 1 -->
-                        <article class="property-card">
+                    <div class="catalog-grid stagger-children">
+                        <article class="property-card reveal" style="--i: 0">
                             <div class="property-image">
-                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Luxury apartment">
+                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Квартира" loading="lazy">
                                 <div class="property-badge">Премиум</div>
-                                <button class="property-favorite">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
-                                    </svg>
+                                <button class="property-favorite" aria-label="Добавить в избранное">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
                                 </button>
                             </div>
                             <div class="property-content">
-                                <div class="property-price">15 500 000 ₽</div>
+                                <div class="property-price">15 500 000 &#8381;</div>
                                 <h3 class="property-title">Просторная квартира с видом на море</h3>
-                                <div class="property-location">📍 Приморский район, ул. Набережная, 45</div>
+                                <div class="property-location">&#128205; Приморский район, ул. Набережная, 45</div>
                                 <div class="property-features">
                                     <span>3 комнаты</span>
                                     <span>120 м²</span>
@@ -192,21 +199,18 @@
                             </div>
                         </article>
 
-                        <!-- Property 2 -->
-                        <article class="property-card">
+                        <article class="property-card reveal" style="--i: 1">
                             <div class="property-image">
-                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Modern house">
+                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Квартира" loading="lazy">
                                 <div class="property-badge new">Новинка</div>
-                                <button class="property-favorite">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
-                                    </svg>
+                                <button class="property-favorite" aria-label="Добавить в избранное">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
                                 </button>
                             </div>
                             <div class="property-content">
-                                <div class="property-price">8 900 000 ₽</div>
+                                <div class="property-price">8 900 000 &#8381;</div>
                                 <h3 class="property-title">Уютная квартира в центре</h3>
-                                <div class="property-location">📍 Центральный район, ул. Ленина, 78</div>
+                                <div class="property-location">&#128205; Центральный район, ул. Ленина, 78</div>
                                 <div class="property-features">
                                     <span>2 комнаты</span>
                                     <span>65 м²</span>
@@ -216,21 +220,18 @@
                             </div>
                         </article>
 
-                        <!-- Property 3 -->
-                        <article class="property-card">
+                        <article class="property-card reveal" style="--i: 2">
                             <div class="property-image">
-                                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Penthouse">
+                                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Пентхаус" loading="lazy">
                                 <div class="property-badge exclusive">Эксклюзив</div>
-                                <button class="property-favorite">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
-                                    </svg>
+                                <button class="property-favorite" aria-label="Добавить в избранное">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
                                 </button>
                             </div>
                             <div class="property-content">
-                                <div class="property-price">28 900 000 ₽</div>
+                                <div class="property-price">28 900 000 &#8381;</div>
                                 <h3 class="property-title">Пентхаус в центре города</h3>
-                                <div class="property-location">📍 Центральный район, ул. Пушкина, 12</div>
+                                <div class="property-location">&#128205; Центральный район, ул. Пушкина, 12</div>
                                 <div class="property-features">
                                     <span>4 комнаты</span>
                                     <span>200 м²</span>
@@ -240,20 +241,17 @@
                             </div>
                         </article>
 
-                        <!-- Property 4 -->
-                        <article class="property-card">
+                        <article class="property-card reveal" style="--i: 3">
                             <div class="property-image">
-                                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80" alt="Apartment">
-                                <button class="property-favorite">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
-                                    </svg>
+                                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80" alt="Студия" loading="lazy">
+                                <button class="property-favorite" aria-label="Добавить в избранное">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
                                 </button>
                             </div>
                             <div class="property-content">
-                                <div class="property-price">6 200 000 ₽</div>
+                                <div class="property-price">6 200 000 &#8381;</div>
                                 <h3 class="property-title">Студия в новом доме</h3>
-                                <div class="property-location">📍 Северный район, ул. Молодежная, 23</div>
+                                <div class="property-location">&#128205; Северный район, ул. Молодёжная, 23</div>
                                 <div class="property-features">
                                     <span>1 комната</span>
                                     <span>38 м²</span>
@@ -263,20 +261,17 @@
                             </div>
                         </article>
 
-                        <!-- Property 5 -->
-                        <article class="property-card">
+                        <article class="property-card reveal" style="--i: 4">
                             <div class="property-image">
-                                <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&q=80" alt="Apartment">
-                                <button class="property-favorite">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
-                                    </svg>
+                                <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&q=80" alt="Квартира" loading="lazy">
+                                <button class="property-favorite" aria-label="Добавить в избранное">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
                                 </button>
                             </div>
                             <div class="property-content">
-                                <div class="property-price">11 750 000 ₽</div>
+                                <div class="property-price">11 750 000 &#8381;</div>
                                 <h3 class="property-title">Светлая квартира с балконом</h3>
-                                <div class="property-location">📍 Приморский район, ул. Солнечная, 56</div>
+                                <div class="property-location">&#128205; Приморский район, ул. Солнечная, 56</div>
                                 <div class="property-features">
                                     <span>2 комнаты</span>
                                     <span>78 м²</span>
@@ -286,21 +281,18 @@
                             </div>
                         </article>
 
-                        <!-- Property 6 -->
-                        <article class="property-card">
+                        <article class="property-card reveal" style="--i: 5">
                             <div class="property-image">
-                                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" alt="Apartment">
+                                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" alt="Квартира" loading="lazy">
                                 <div class="property-badge">Премиум</div>
-                                <button class="property-favorite">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
-                                    </svg>
+                                <button class="property-favorite" aria-label="Добавить в избранное">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
                                 </button>
                             </div>
                             <div class="property-content">
-                                <div class="property-price">19 500 000 ₽</div>
+                                <div class="property-price">19 500 000 &#8381;</div>
                                 <h3 class="property-title">Квартира с панорамными окнами</h3>
-                                <div class="property-location">📍 Центральный район, ул. Парковая, 3</div>
+                                <div class="property-location">&#128205; Центральный район, ул. Парковая, 3</div>
                                 <div class="property-features">
                                     <span>3 комнаты</span>
                                     <span>145 м²</span>
@@ -311,9 +303,8 @@
                         </article>
                     </div>
 
-                    <!-- Pagination -->
                     <div class="pagination">
-                        <button class="pagination-btn" disabled>← Назад</button>
+                        <button class="pagination-btn" disabled>&#8592; Назад</button>
                         <div class="pagination-numbers">
                             <button class="pagination-number active">1</button>
                             <button class="pagination-number">2</button>
@@ -321,7 +312,7 @@
                             <span>...</span>
                             <button class="pagination-number">12</button>
                         </div>
-                        <button class="pagination-btn">Вперед →</button>
+                        <button class="pagination-btn">Вперёд &#8594;</button>
                     </div>
                 </div>
             </div>
@@ -333,26 +324,24 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <div class="logo">
-                        <span class="logo-icon">◆</span>
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">&#9670;</span>
                         <span class="logo-text">PRIME ESTATE</span>
-                    </div>
-                    <p class="footer-text">Элитная недвижимость премиум-класса</p>
+                    </a>
+                    <p class="footer-text">Агентство элитной недвижимости премиум-класса.</p>
                 </div>
                 <div class="footer-col">
                     <h4 class="footer-title">Каталог</h4>
                     <ul class="footer-links">
-                        <li><a href="catalog.html">Вторичное жилье</a></li>
-                        <li><a href="catalog.html">Аренда</a></li>
+                        <li><a href="catalog.html">Вторичное жильё</a></li>
                         <li><a href="newbuildings.html">Новостройки</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4 class="footer-title">Компания</h4>
                     <ul class="footer-links">
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -369,6 +358,11 @@
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" aria-label="Наверх">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="toast" id="toast"></div>
 
     <script src="script.js"></script>
 </body>

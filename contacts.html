@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Prime Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">&#9670;</span>
+                    <span class="logo-text">PRIME ESTATE</span>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="catalog.html" class="nav-link">Вторичка</a>
+                    <a href="newbuildings.html" class="nav-link">Новостройки</a>
+                    <a href="about.html" class="nav-link">О компании</a>
+                    <a href="contacts.html" class="nav-link active">Контакты</a>
+                </nav>
+                <a href="tel:+74951234567" class="btn btn-primary">+7 (495) 123-45-67</a>
+                <button class="mobile-menu-btn" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header about-page-header">
+        <div class="page-header-bg"></div>
+        <div class="container">
+            <h1 class="page-title">Контакты</h1>
+            <p class="page-subtitle">Свяжитесь с нами удобным для вас способом &mdash; мы всегда на связи</p>
+            <span class="decorative-line"></span>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contacts-section">
+        <div class="container">
+            <div class="contacts-grid stagger-children">
+                <div class="contact-card reveal" style="--i: 0">
+                    <div class="contact-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-card-title">Телефон</h3>
+                    <a href="tel:+74951234567" class="contact-card-value">+7 (495) 123-45-67</a>
+                    <a href="tel:+74959876543" class="contact-card-value">+7 (495) 987-65-43</a>
+                    <p class="contact-card-note">Бесплатная консультация</p>
+                </div>
+                <div class="contact-card reveal" style="--i: 1">
+                    <div class="contact-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7l-10 7L2 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-card-title">Email</h3>
+                    <a href="mailto:info@primeestate.ru" class="contact-card-value">info@primeestate.ru</a>
+                    <a href="mailto:sales@primeestate.ru" class="contact-card-value">sales@primeestate.ru</a>
+                    <p class="contact-card-note">Ответим в течение часа</p>
+                </div>
+                <div class="contact-card reveal" style="--i: 2">
+                    <div class="contact-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-card-title">Адрес</h3>
+                    <p class="contact-card-value">г. Москва, ул. Примерная, д. 1</p>
+                    <p class="contact-card-value">Бизнес-центр &laquo;Премиум&raquo;, офис 301</p>
+                    <p class="contact-card-note">Рядом с метро</p>
+                </div>
+                <div class="contact-card reveal" style="--i: 3">
+                    <div class="contact-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-card-title">Режим работы</h3>
+                    <p class="contact-card-value">Пн &ndash; Пт: 9:00 &ndash; 20:00</p>
+                    <p class="contact-card-value">Сб: 10:00 &ndash; 18:00</p>
+                    <p class="contact-card-note">Вс &mdash; выходной</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section reveal">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.3779!2d37.6173!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIwLjkiTiAzN8KwMzcnMDIuMyJF!5e0!3m2!1sru!2sru!4v1700000000000!5m2!1sru!2sru" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Prime Estate на карте"></iframe>
+        </div>
+    </section>
+
+    <!-- Contact Form & Social -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-grid">
+                <div class="contact-form-content reveal-left">
+                    <h2 class="contact-form-heading">Напишите нам</h2>
+                    <span class="decorative-line" style="margin: 16px 0 0 0;"></span>
+                    <p class="contact-form-text">Заполните форму, и мы свяжемся с вами в ближайшее время. Или позвоните нам &mdash; мы всегда рады помочь.</p>
+                    <form class="form-block">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name">Ваше имя</label>
+                                <input type="text" id="contact-name" class="form-input" placeholder="Иван Иванов" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-phone">Телефон</label>
+                                <input type="tel" id="contact-phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">Email</label>
+                            <input type="email" id="contact-email" class="form-input" placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message">Сообщение</label>
+                            <textarea id="contact-message" class="form-input form-textarea" placeholder="Расскажите, чем мы можем помочь..." rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg form-submit">Отправить сообщение</button>
+                    </form>
+                </div>
+                <div class="contact-form-sidebar reveal-right">
+                    <div class="sidebar-info-block">
+                        <h3 class="sidebar-info-title">Мы в социальных сетях</h3>
+                        <p class="sidebar-info-text">Следите за нашими новостями и эксклюзивными предложениями</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Telegram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="WhatsApp">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="VK">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.525-2.049-1.714-1.033-1.01-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.847 2.49 2.27 4.675 2.853 4.675.22 0 .322-.102.322-.66V10.5c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.15-3.574 2.15-3.574.119-.254.322-.491.762-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.049.17.474-.085.716-.576.716z"/></svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar-info-block">
+                        <h3 class="sidebar-info-title">Быстрая связь</h3>
+                        <p class="sidebar-info-text">Предпочитаете звонить? Наши менеджеры готовы ответить на все ваши вопросы.</p>
+                        <a href="tel:+74951234567" class="btn btn-primary" style="width: 100%;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                            Позвонить
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">&#9670;</span>
+                        <span class="logo-text">PRIME ESTATE</span>
+                    </a>
+                    <p class="footer-text">Агентство элитной недвижимости премиум-класса. Помогаем найти дом вашей мечты с 2014 года.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Каталог</h4>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html">Вторичное жильё</a></li>
+                        <li><a href="newbuildings.html">Новостройки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Компания</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-links">
+                        <li>+7 (495) 123-45-67</li>
+                        <li>info@primeestate.ru</li>
+                        <li>г. Москва, ул. Примерная, 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Prime Estate. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" aria-label="Наверх">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Элитная недвижимость | Ваше агентство</title>
+    <title>Prime Estate | Элитная недвижимость</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,20 +14,19 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <span class="logo-icon">◆</span>
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">&#9670;</span>
                     <span class="logo-text">PRIME ESTATE</span>
-                </div>
+                </a>
                 <nav class="nav">
                     <a href="index.html" class="nav-link active">Главная</a>
                     <a href="catalog.html" class="nav-link">Вторичка</a>
-                    <a href="catalog.html" class="nav-link">Аренда</a>
                     <a href="newbuildings.html" class="nav-link">Новостройки</a>
-                    <a href="#" class="nav-link">О компании</a>
-                    <a href="#" class="nav-link">Контакты</a>
+                    <a href="about.html" class="nav-link">О компании</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
                 </nav>
-                <button class="btn btn-primary">+7 (495) 123-45-67</button>
-                <button class="mobile-menu-btn">
+                <a href="tel:+74951234567" class="btn btn-primary">+7 (495) 123-45-67</a>
+                <button class="mobile-menu-btn" aria-label="Меню">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,10 +56,34 @@
         </div>
     </section>
 
+    <!-- Stats Counter -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid reveal">
+                <div class="stat-item">
+                    <div class="stat-number"><span data-count="12">0</span></div>
+                    <div class="stat-label">Лет на рынке</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><span data-count="1500">0</span><span class="accent">+</span></div>
+                    <div class="stat-label">Объектов продано</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><span data-count="98">0</span><span class="accent">%</span></div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><span data-count="50">0</span><span class="accent">+</span></div>
+                    <div class="stat-label">Экспертов в команде</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Quick Search -->
     <section class="quick-search">
         <div class="container">
-            <div class="search-box">
+            <div class="search-box reveal">
                 <div class="search-tabs">
                     <button class="search-tab active">Купить</button>
                     <button class="search-tab">Арендовать</button>
@@ -96,7 +119,7 @@
                         </select>
                     </div>
                     <div class="search-field">
-                        <label>Цена</label>
+                        <label>Цена до</label>
                         <input type="text" placeholder="от 5 000 000 ₽">
                     </div>
                     <button class="btn btn-primary btn-search">Найти</button>
@@ -108,26 +131,25 @@
     <!-- Featured Properties -->
     <section class="featured">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2 class="section-title">Избранные предложения</h2>
-                <a href="catalog.html" class="section-link">Все объекты →</a>
+                <a href="catalog.html" class="section-link">Все объекты &#8594;</a>
             </div>
-            <div class="properties-grid">
-                <!-- Property Card 1 -->
-                <article class="property-card">
+            <div class="properties-grid stagger-children">
+                <article class="property-card reveal" style="--i: 0">
                     <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Luxury apartment">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Просторная квартира с видом на море" loading="lazy">
                         <div class="property-badge">Премиум</div>
-                        <button class="property-favorite">
+                        <button class="property-favorite" aria-label="Добавить в избранное">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
                             </svg>
                         </button>
                     </div>
                     <div class="property-content">
-                        <div class="property-price">15 500 000 ₽</div>
+                        <div class="property-price">15 500 000 &#8381;</div>
                         <h3 class="property-title">Просторная квартира с видом на море</h3>
-                        <div class="property-location">📍 Приморский район, ул. Набережная, 45</div>
+                        <div class="property-location">&#128205; Приморский район, ул. Набережная, 45</div>
                         <div class="property-features">
                             <span>3 комнаты</span>
                             <span>120 м²</span>
@@ -137,21 +159,20 @@
                     </div>
                 </article>
 
-                <!-- Property Card 2 -->
-                <article class="property-card">
+                <article class="property-card reveal" style="--i: 1">
                     <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Modern house">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Современный дом в закрытом посёлке" loading="lazy">
                         <div class="property-badge new">Новинка</div>
-                        <button class="property-favorite">
+                        <button class="property-favorite" aria-label="Добавить в избранное">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
                             </svg>
                         </button>
                     </div>
                     <div class="property-content">
-                        <div class="property-price">42 000 000 ₽</div>
-                        <h3 class="property-title">Современный дом в закрытом поселке</h3>
-                        <div class="property-location">📍 Северный район, КП "Зеленая долина"</div>
+                        <div class="property-price">42 000 000 &#8381;</div>
+                        <h3 class="property-title">Современный дом в закрытом посёлке</h3>
+                        <div class="property-location">&#128205; Северный район, КП «Зелёная долина»</div>
                         <div class="property-features">
                             <span>5 комнат</span>
                             <span>350 м²</span>
@@ -161,21 +182,20 @@
                     </div>
                 </article>
 
-                <!-- Property Card 3 -->
-                <article class="property-card">
+                <article class="property-card reveal" style="--i: 2">
                     <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Penthouse">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Пентхаус в центре города" loading="lazy">
                         <div class="property-badge exclusive">Эксклюзив</div>
-                        <button class="property-favorite">
+                        <button class="property-favorite" aria-label="Добавить в избранное">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
                             </svg>
                         </button>
                     </div>
                     <div class="property-content">
-                        <div class="property-price">28 900 000 ₽</div>
+                        <div class="property-price">28 900 000 &#8381;</div>
                         <h3 class="property-title">Пентхаус в центре города</h3>
-                        <div class="property-location">📍 Центральный район, ул. Пушкина, 12</div>
+                        <div class="property-location">&#128205; Центральный район, ул. Пушкина, 12</div>
                         <div class="property-features">
                             <span>4 комнаты</span>
                             <span>200 м²</span>
@@ -191,23 +211,23 @@
     <!-- New Buildings -->
     <section class="new-buildings">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2 class="section-title">Новостройки</h2>
-                <a href="newbuildings.html" class="section-link">Все ЖК →</a>
+                <a href="newbuildings.html" class="section-link">Все ЖК &#8594;</a>
             </div>
-            <div class="buildings-grid">
-                <div class="building-card">
+            <div class="buildings-grid stagger-children">
+                <div class="building-card reveal" style="--i: 0">
                     <div class="building-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="New building">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="ЖК Морской квартал" loading="lazy">
                         <div class="building-status">Сдача Q4 2026</div>
                     </div>
                     <div class="building-content">
-                        <h3 class="building-title">ЖК "Морской квартал"</h3>
-                        <p class="building-location">📍 Приморский район</p>
+                        <h3 class="building-title">ЖК «Морской квартал»</h3>
+                        <p class="building-location">&#128205; Приморский район</p>
                         <div class="building-info">
                             <div class="building-info-item">
                                 <span class="info-label">От</span>
-                                <span class="info-value">8 500 000 ₽</span>
+                                <span class="info-value">8 500 000 &#8381;</span>
                             </div>
                             <div class="building-info-item">
                                 <span class="info-label">Площадь</span>
@@ -218,18 +238,18 @@
                     </div>
                 </div>
 
-                <div class="building-card">
+                <div class="building-card reveal" style="--i: 1">
                     <div class="building-image">
-                        <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=800&q=80" alt="New building">
+                        <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=800&q=80" alt="ЖК Парковые резиденции" loading="lazy">
                         <div class="building-status ready">Готов</div>
                     </div>
                     <div class="building-content">
-                        <h3 class="building-title">ЖК "Парковые резиденции"</h3>
-                        <p class="building-location">📍 Северный район</p>
+                        <h3 class="building-title">ЖК «Парковые резиденции»</h3>
+                        <p class="building-location">&#128205; Северный район</p>
                         <div class="building-info">
                             <div class="building-info-item">
                                 <span class="info-label">От</span>
-                                <span class="info-value">12 000 000 ₽</span>
+                                <span class="info-value">12 000 000 &#8381;</span>
                             </div>
                             <div class="building-info-item">
                                 <span class="info-label">Площадь</span>
@@ -246,27 +266,36 @@
     <!-- Services -->
     <section class="services">
         <div class="container">
-            <h2 class="section-title center">Наши услуги</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3 class="service-title">Продажа недвижимости</h3>
-                    <p class="service-text">Помощь в продаже вашей недвижимости по максимальной цене</p>
+            <h2 class="section-title center reveal">Наши услуги</h2>
+            <p class="section-subtitle reveal">Полный спектр услуг для комфортной покупки, продажи и аренды недвижимости</p>
+            <div class="services-grid stagger-children">
+                <div class="service-card reveal" style="--i: 0">
+                    <div class="service-icon">&#127968;</div>
+                    <div>
+                        <h3 class="service-title">Продажа недвижимости</h3>
+                        <p class="service-text">Помощь в продаже вашей недвижимости по максимальной цене</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🔑</div>
-                    <h3 class="service-title">Аренда объектов</h3>
-                    <p class="service-text">Подбор квартир и домов для долгосрочной аренды</p>
+                <div class="service-card reveal" style="--i: 1">
+                    <div class="service-icon">&#128273;</div>
+                    <div>
+                        <h3 class="service-title">Аренда объектов</h3>
+                        <p class="service-text">Подбор квартир и домов для долгосрочной аренды</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">📋</div>
-                    <h3 class="service-title">Юридическое сопровождение</h3>
-                    <p class="service-text">Полное юридическое сопровождение сделок</p>
+                <div class="service-card reveal" style="--i: 2">
+                    <div class="service-icon">&#128203;</div>
+                    <div>
+                        <h3 class="service-title">Юридическое сопровождение</h3>
+                        <p class="service-text">Полное юридическое сопровождение сделок</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">💰</div>
-                    <h3 class="service-title">Ипотека</h3>
-                    <p class="service-text">Помощь в получении ипотеки на выгодных условиях</p>
+                <div class="service-card reveal" style="--i: 3">
+                    <div class="service-icon">&#128176;</div>
+                    <div>
+                        <h3 class="service-title">Ипотека</h3>
+                        <p class="service-text">Помощь в получении ипотеки на выгодных условиях</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -275,13 +304,13 @@
     <!-- CTA -->
     <section class="cta" id="consultation">
         <div class="container">
-            <div class="cta-content">
+            <div class="cta-content reveal">
                 <h2 class="cta-title">Не нашли подходящий объект?</h2>
-                <p class="cta-text">Оставьте заявку, и мы подберем недвижимость специально для вас</p>
+                <p class="cta-text">Оставьте заявку, и мы подберём недвижимость специально для вас</p>
                 <form class="cta-form">
                     <input type="text" placeholder="Ваше имя" required>
                     <input type="tel" placeholder="+7 (___) ___-__-__" required>
-                    <button type="submit" class="btn btn-primary">Получить консультацию</button>
+                    <button type="submit" class="btn btn-accent">Получить консультацию</button>
                 </form>
             </div>
         </div>
@@ -292,26 +321,24 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <div class="logo">
-                        <span class="logo-icon">◆</span>
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">&#9670;</span>
                         <span class="logo-text">PRIME ESTATE</span>
-                    </div>
-                    <p class="footer-text">Элитная недвижимость премиум-класса</p>
+                    </a>
+                    <p class="footer-text">Агентство элитной недвижимости премиум-класса. Помогаем найти дом вашей мечты с 2014 года.</p>
                 </div>
                 <div class="footer-col">
                     <h4 class="footer-title">Каталог</h4>
                     <ul class="footer-links">
-                        <li><a href="catalog.html">Вторичное жилье</a></li>
-                        <li><a href="catalog.html">Аренда</a></li>
+                        <li><a href="catalog.html">Вторичное жильё</a></li>
                         <li><a href="newbuildings.html">Новостройки</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4 class="footer-title">Компания</h4>
                     <ul class="footer-links">
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -328,6 +355,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" aria-label="Наверх">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
 
     <script src="script.js"></script>
 </body>
