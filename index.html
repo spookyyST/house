@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Элитная недвижимость | Ваше агентство</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">◆</span>
+                    <span class="logo-text">PRIME ESTATE</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">Главная</a>
+                    <a href="catalog.html" class="nav-link">Вторичка</a>
+                    <a href="catalog.html" class="nav-link">Аренда</a>
+                    <a href="newbuildings.html" class="nav-link">Новостройки</a>
+                    <a href="#" class="nav-link">О компании</a>
+                    <a href="#" class="nav-link">Контакты</a>
+                </nav>
+                <button class="btn btn-primary">+7 (495) 123-45-67</button>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Элитная недвижимость<br>вашей мечты</h1>
+                <p class="hero-subtitle">Эксклюзивные предложения премиум-класса<br>в лучших районах города</p>
+                <div class="hero-actions">
+                    <a href="catalog.html" class="btn btn-primary btn-lg">Смотреть каталог</a>
+                    <a href="#consultation" class="btn btn-secondary btn-lg">Консультация</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Листайте вниз</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Quick Search -->
+    <section class="quick-search">
+        <div class="container">
+            <div class="search-box">
+                <div class="search-tabs">
+                    <button class="search-tab active">Купить</button>
+                    <button class="search-tab">Арендовать</button>
+                    <button class="search-tab">Новостройки</button>
+                </div>
+                <div class="search-form">
+                    <div class="search-field">
+                        <label>Тип недвижимости</label>
+                        <select>
+                            <option>Квартира</option>
+                            <option>Дом</option>
+                            <option>Таунхаус</option>
+                            <option>Пентхаус</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label>Район</label>
+                        <select>
+                            <option>Все районы</option>
+                            <option>Центральный</option>
+                            <option>Приморский</option>
+                            <option>Северный</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label>Комнат</label>
+                        <select>
+                            <option>Любое</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4+</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label>Цена</label>
+                        <input type="text" placeholder="от 5 000 000 ₽">
+                    </div>
+                    <button class="btn btn-primary btn-search">Найти</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Избранные предложения</h2>
+                <a href="catalog.html" class="section-link">Все объекты →</a>
+            </div>
+            <div class="properties-grid">
+                <!-- Property Card 1 -->
+                <article class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Luxury apartment">
+                        <div class="property-badge">Премиум</div>
+                        <button class="property-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">15 500 000 ₽</div>
+                        <h3 class="property-title">Просторная квартира с видом на море</h3>
+                        <div class="property-location">📍 Приморский район, ул. Набережная, 45</div>
+                        <div class="property-features">
+                            <span>3 комнаты</span>
+                            <span>120 м²</span>
+                            <span>7 этаж</span>
+                        </div>
+                        <a href="property-single.html" class="btn btn-outline">Подробнее</a>
+                    </div>
+                </article>
+
+                <!-- Property Card 2 -->
+                <article class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Modern house">
+                        <div class="property-badge new">Новинка</div>
+                        <button class="property-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">42 000 000 ₽</div>
+                        <h3 class="property-title">Современный дом в закрытом поселке</h3>
+                        <div class="property-location">📍 Северный район, КП "Зеленая долина"</div>
+                        <div class="property-features">
+                            <span>5 комнат</span>
+                            <span>350 м²</span>
+                            <span>2 этажа</span>
+                        </div>
+                        <a href="property-single.html" class="btn btn-outline">Подробнее</a>
+                    </div>
+                </article>
+
+                <!-- Property Card 3 -->
+                <article class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Penthouse">
+                        <div class="property-badge exclusive">Эксклюзив</div>
+                        <button class="property-favorite">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">28 900 000 ₽</div>
+                        <h3 class="property-title">Пентхаус в центре города</h3>
+                        <div class="property-location">📍 Центральный район, ул. Пушкина, 12</div>
+                        <div class="property-features">
+                            <span>4 комнаты</span>
+                            <span>200 м²</span>
+                            <span>25 этаж</span>
+                        </div>
+                        <a href="property-single.html" class="btn btn-outline">Подробнее</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Buildings -->
+    <section class="new-buildings">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Новостройки</h2>
+                <a href="newbuildings.html" class="section-link">Все ЖК →</a>
+            </div>
+            <div class="buildings-grid">
+                <div class="building-card">
+                    <div class="building-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="New building">
+                        <div class="building-status">Сдача Q4 2026</div>
+                    </div>
+                    <div class="building-content">
+                        <h3 class="building-title">ЖК "Морской квартал"</h3>
+                        <p class="building-location">📍 Приморский район</p>
+                        <div class="building-info">
+                            <div class="building-info-item">
+                                <span class="info-label">От</span>
+                                <span class="info-value">8 500 000 ₽</span>
+                            </div>
+                            <div class="building-info-item">
+                                <span class="info-label">Площадь</span>
+                                <span class="info-value">от 45 м²</span>
+                            </div>
+                        </div>
+                        <a href="newbuilding-single.html" class="btn btn-outline">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="building-card">
+                    <div class="building-image">
+                        <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=800&q=80" alt="New building">
+                        <div class="building-status ready">Готов</div>
+                    </div>
+                    <div class="building-content">
+                        <h3 class="building-title">ЖК "Парковые резиденции"</h3>
+                        <p class="building-location">📍 Северный район</p>
+                        <div class="building-info">
+                            <div class="building-info-item">
+                                <span class="info-label">От</span>
+                                <span class="info-value">12 000 000 ₽</span>
+                            </div>
+                            <div class="building-info-item">
+                                <span class="info-label">Площадь</span>
+                                <span class="info-value">от 65 м²</span>
+                            </div>
+                        </div>
+                        <a href="newbuilding-single.html" class="btn btn-outline">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title center">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3 class="service-title">Продажа недвижимости</h3>
+                    <p class="service-text">Помощь в продаже вашей недвижимости по максимальной цене</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔑</div>
+                    <h3 class="service-title">Аренда объектов</h3>
+                    <p class="service-text">Подбор квартир и домов для долгосрочной аренды</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3 class="service-title">Юридическое сопровождение</h3>
+                    <p class="service-text">Полное юридическое сопровождение сделок</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h3 class="service-title">Ипотека</h3>
+                    <p class="service-text">Помощь в получении ипотеки на выгодных условиях</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="consultation">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Не нашли подходящий объект?</h2>
+                <p class="cta-text">Оставьте заявку, и мы подберем недвижимость специально для вас</p>
+                <form class="cta-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit" class="btn btn-primary">Получить консультацию</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">PRIME ESTATE</span>
+                    </div>
+                    <p class="footer-text">Элитная недвижимость премиум-класса</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Каталог</h4>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html">Вторичное жилье</a></li>
+                        <li><a href="catalog.html">Аренда</a></li>
+                        <li><a href="newbuildings.html">Новостройки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Компания</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-links">
+                        <li>+7 (495) 123-45-67</li>
+                        <li>info@primeestate.ru</li>
+                        <li>г. Москва, ул. Примерная, 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Prime Estate. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
